@@ -1,0 +1,42 @@
+
+  #include <stdio.h>
+
+int main(void) {
+    int a, b, temp;
+    float length, breadth, area, perimeter, celsius, fahrenheit;
+    char grade = 'A';
+    double pi = 3.14159265;
+
+    printf("=== Data types demo ===\n");
+    printf("int: %d, float: %.2f, double: %.5lf, char: %c\n", 10, 3.5f, pi, grade);
+
+    printf("\n=== Arithmetic operators ===\n");
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+    printf("%d + %d = %d\n", a, b, a + b);
+    printf("%d - %d = %d\n", a, b, a - b);
+    printf("%d * %d = %d\n", a, b, a * b);
+    if (b != 0) {
+        printf("%d / %d = %d\n", a, b, a / b);
+        printf("%d %% %d = %d\n", a, b, a % b);
+    }
+
+    printf("\n=== Area & Perimeter of rectangle ===\n");
+    printf("Enter length and breadth: ");
+    scanf("%f %f", &length, &breadth);
+    area = length * breadth;
+    perimeter = 2 * (length + breadth);
+    printf("Area = %.2f\nPerimeter = %.2f\n", area, perimeter);
+
+    printf("\n=== Temperature conversion ===\n");
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &celsius);
+    fahrenheit = (celsius * 9 / 5) + 32;
+    printf("%.2f C = %.2f F\n", celsius, fahrenheit);
+
+    printf("\n=== Swapping two numbers ===\n");
+    printf("Before swap: a = %d, b = %d\n", a, b);
+    temp = a; a = b; b = temp;
+    printf("After swap:  a = %d, b = %d\n", a, b);
+    return 0;
+}
